@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Card </title>
+		<link rel="stylesheet" type="text/css" href="card.css">
+		<script>
+			function changeImage(id) {
+				var image = document.getElementById(id);
+				if (id == "0") {
+					image.src = "imgs/Pippo.jpeg";
+				} else if (id == "1") {
+					image.src = "imgs/Topopipo.jpeg";
+				} else {
+					image.src = "imgs/Peppa.jpeg";
+				}
+			}
+			function changeName(id) {
+				var h2 = document.getElementById(id);
+				if (id == "old_0") {
+					h2.textContent = "Pippo Ciot";
+				} else if (id == "old_1") {
+					h2.textContent = "Peppe Crack";
+				} else {
+					h2.textContent = "Peppa Crock";
+				}
+			}
+		</script>
+
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<div class="card">
+							<div class="imgBox">
+								<img id="0" src="imgs/Peppa.jpeg">
+							</div>
+							<div class="content">
+								<div class="details">
+									<h2 id="old_0">Peppa Crock</h2>
+									<h2><br><span>42Roma Student</span></h2>
+									<div class="actionButton">
+										<button onclick="changeImage('0')">Contact</button>
+										<button onclick="changeName('old_0')">Follow</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th>
+						<div class="card">
+							<div class="imgBox">
+								<img id="1" src="imgs/Pippo.jpeg">
+							</div>
+							<div class="content">
+								<div class="details">
+									<h2 id="old_1">Pippo Ciot</h2>
+									<h2><br><span>42Roma Student</span></h2>
+									<div class="actionButton">
+										<button onclick="changeImage('1')">Contact</button>
+										<button onclick="changeName('old_1')">Follow</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th>
+						<div class="card">
+							<div class="imgBox">
+								<img id="2" src="imgs/Topopipo.jpeg">
+							</div>
+							<div class="content">
+								<div class="details">
+									<h2 id="old_2">Peppe Crack</h2>
+									<h2><br><span>42Roma Student</span></h2>
+									<div class="actionButton">
+										<button onclick="changeImage('2')">Contact</button>
+										<button onclick="changeName('old_2')">Follow</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+		</table>
+	</body>
+	<footer>
+		<div>
+			<hr style="width:100%; text-align:center">
+			<p>&#169Aperrone2023</p>
+		</div>
+	</footer>
+</html>
