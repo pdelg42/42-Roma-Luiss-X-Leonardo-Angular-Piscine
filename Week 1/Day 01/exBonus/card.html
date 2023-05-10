@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Card </title>
+		<link rel="stylesheet" type="text/css" href="card.css">
+		<script type="text/javascript" src="ohWowA.js"></script>
+	</head>
+	<body>
+		<table>
+			<form method="post" name="modulo">
+				<tr>
+					<td colspan="2" align="center">
+						<b>Registrazione al servizio</b>
+					</td>
+				</tr>
+			<tr>
+				<td>
+					<b>Cognome</b></td><td><input type="text" name="cognome" maxlength="50">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Nome</b></td><td><input type="text" name="nome" maxlength="50">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Sesso</b>
+				</td>
+				<td>
+					<input type="radio" name="sesso" value="M" checked>M
+					<input type="radio" name="sesso" value="F">F
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Universitá</b>
+				</td>
+				<td>
+					<select name="citta">
+					<option>- Seleziona la tua Universitá -</option>
+					<option value="Roma 3">Roma 3</option>
+					<option value="Sapienza">Sapienza</option>
+					<option value="Luiss">Luiss</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Zip code</b>
+				</td>
+				<td>
+					<input type="password" name="zipcode" maxlength="5">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Studente Lavoratore</b>
+				</td>
+				<td>
+					<input type="checkbox" name="studentworker">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Job description</b>
+				</td>
+				<td>
+					<input type="text" name="nome" maxlength="80">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" align="left"><input type="button" value="Invia" onClick="Modulo()">
+				</td>
+				<td colspan="2" align="right"><input type="button" value="Reset" onClick="Modulo()">
+				</td>
+			</tr>
+			</form>
+		</table>
+	</body>
+	<footer>
+		<div>
+			<hr>
+			<p>&#169Aperrone2023</p>
+		</div>
+	</footer>
+</html>
