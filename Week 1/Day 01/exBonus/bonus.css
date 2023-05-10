@@ -51,6 +51,7 @@ label {
     font-weight: bold;
     transition: 1s;
     transform: translateX(1px);
+    margin-left: 5px;
   }
 
 select {

@@ -51,7 +51,6 @@ function isNumeric (x, errorMsg) {
       return (1);
       break ;
     }
-    console.log("here" + i);
     i++;
   }
   return (0);
@@ -59,5 +58,26 @@ function isNumeric (x, errorMsg) {
 
 function resetForm() {
   var element = document.getElementById("megaform");
+  var sp = document.getElementsByTagName("span"); 
+
   element.reset()
+  for (i in sp) {
+    sp[i].textContent = "";
+  }
 };
+
+function sendForm() {
+  var errorMsg4 = document.getElementById("errorMsg4");
+  var firstName = document.getElementById("firstName");
+  var lastName = document.getElementById("lastName");
+  const studentWorker = document.getElementById("studentWorker");
+  var textBox = document.getElementById("text-box");
+
+  console.log(studentWorker);
+  if (firstName.value == "" || lastName.value == "") {
+    errorMsg4.textContent = "Complete the fields!";
+  }
+  if (studentWorker) {
+    alert("ok");
+  }
+}
