@@ -21,13 +21,17 @@ function controlZip(id, msg) {
   var errorMsg = document.getElementById(msg);
   var strValue = inputString.value;
   var isNumber = /^\d+$/.test(strValue);
-  console.log(strValue);
+  var x = String;
+  x = strValue;
   if (strValue == ""){
     errorMsg.textContent = " ";
   }
   else if (!isNumber) {
     errorMsg.textContent = "Inserisci una password valida!";
-  } 
+  }
+  else if (x.length != 5) {
+    errorMsg.textContent = "Inserisci una password di 5!";
+  }
   else {
     errorMsg.textContent = "Input valido!";
   }
