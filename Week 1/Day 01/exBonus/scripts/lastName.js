@@ -7,7 +7,12 @@ inputString.addEventListener("input", function() {
 
   if (isNumber) {
     errorMsg.textContent = "Inserisci una stringa valida!";
-  } else {
+  }
+  else if (strValue == ""){
+    errorMsg.textContent = " ";
+
+  }
+  else {
     errorMsg.textContent = "Input valido!";
   }
 });

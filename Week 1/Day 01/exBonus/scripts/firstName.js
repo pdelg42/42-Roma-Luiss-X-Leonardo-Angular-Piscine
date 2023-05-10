@@ -1,13 +1,18 @@
-const inputString = document.getElementById("firstName");
-const errorMsg = document.getElementById("errorMsg");
+const inputString2 = document.getElementById("firstName");
+const errorMsg2 = document.getElementById("errorMsg2");
 
-inputString.addEventListener("input", function() {
-  const strValue = inputString.value;
-  const isNumber = /^\d+$/.test(strValue);
+inputString2.addEventListener("input", function() {
+  const strValue2 = inputString2.value;
+  const isNumber2 = /^\d+$/.test(strValue2);
 
-  if (isNumber) {
-    errorMsg.textContent = "Inserisci una stringa valida!";
-  } else {
-    errorMsg.textContent = "Input valido!";
+  if (isNumber2) {
+    errorMsg2.textContent = "Inserisci una stringa valida!";
+  } 
+  else if (strValue2 == ""){
+    errorMsg2.textContent = " ";
+
+  }
+  else {
+    errorMsg2.textContent = "Input valido!";
   }
 });
