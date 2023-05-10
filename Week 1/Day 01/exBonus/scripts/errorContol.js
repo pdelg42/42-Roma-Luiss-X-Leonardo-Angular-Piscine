@@ -37,3 +37,7 @@ function controlZip(id, msg) {
   }
 };
 
+function resetForm() {
+  var element = document.getElementById("megaform");
+  element.reset()
+};
