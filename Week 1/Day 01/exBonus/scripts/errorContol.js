@@ -56,3 +56,8 @@ function isNumeric (x, errorMsg) {
   }
   return (0);
 }
+
+function resetForm() {
+  var element = document.getElementById("megaform");
+  element.reset()
+};
