@@ -1,4 +1,4 @@
-function isNumeric(numb: string, errorMsg?: string): number {
+function isNumeric_my(numb: string, errorMsg?: string): number {
 	let i = 0;
 
 	while (numb[i]) {
@@ -10,13 +10,13 @@ function isNumeric(numb: string, errorMsg?: string): number {
 	return 1;
 }
 
-function calculate(): boolean {
+function calculates_my(): boolean {
 	const left = (document.getElementById("x") as HTMLInputElement).value;
 	const operator = (document.getElementById("menu") as HTMLInputElement).value;
 	const right = (document.getElementById("y") as HTMLInputElement).value;
 	const output = document.getElementById("output");
 
-	if (isNumeric(left) && isNumeric(right)) {
+	if (isNumeric_my(left) == 1 && isNumeric_my(right) == 1) {
 		const x = Number(left);
 		const y = Number(right);
 		if (y === 0 && operator === "/") {
@@ -24,16 +24,17 @@ function calculate(): boolean {
 			window.open('https://youtu.be/T2U07KFqmew', '_blank');
 			return false;
 		} else {
-			const result = operation(x, y, operator);
+			const result = operations_my(x, y, operator);
 			output.textContent = result.toString();
 			return true;
 		}
 	} else {
+		output.textContent = "input non valido";
 		return false;
 	}
 }
 
-function operation(x: number, y: number, op: string): number {
+function operations_my(x: number, y: number, op: string): number {
 	if (op === "+") {
 		return x + y;
 	}
