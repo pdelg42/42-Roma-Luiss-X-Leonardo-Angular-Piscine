@@ -1,0 +1,25 @@
+{
+	"cards" : [
+		{
+			"Images" : "imgs/Peppa.jpeg",
+			"Title"  : "Peppi Crock",
+			"Description" : "42Cavy",
+			"Category" : "Student",
+			"Price" : "450€"
+		},
+		{
+			"Images" : "imgs/Pippo.jpeg",
+			"Title"  : "Pippo Ciot",
+			"Description" : "42Cavy",
+			"Category" : "Learner",
+			"Price" : "150€"
+		},
+		{
+			"Images" : "imgs/Topopipo.jpeg",
+			"Title"  : "Peppe Crack",
+			"Description" : "42Cavy",
+			"Category" : "Member",
+			"Price" : "950€"
+		}
+	]
+}
