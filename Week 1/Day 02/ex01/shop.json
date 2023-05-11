@@ -2,7 +2,7 @@
 	"cards" : [
 		{
 			"images" : "imgs/Peppa.jpeg",
-			"title"  : "Peppi Crock",
+			"title"  : "Peppa Crock",
 			"description" : "42Cavy",
 			"category" : "Student",
 			"price" : "450€"
@@ -34,6 +34,76 @@
 			"description" : "42Cavy",
 			"category" : "Member",
 			"price" : "950€"
+		},
+		{
+			"images" : "imgs/Peppa.jpeg",
+			"title"  : "Peppa Crock",
+			"description" : "42Cavy",
+			"category" : "Student",
+			"price" : "450€"
+		},
+		{
+			"images" : "imgs/Pippo.jpeg",
+			"title"  : "Pippo Ciot",
+			"description" : "42Cavy",
+			"category" : "Learner",
+			"price" : "150€"
+		},
+		{
+			"images" : "imgs/Peppa.jpeg",
+			"title"  : "Peppa Crock",
+			"description" : "42Cavy",
+			"category" : "Student",
+			"price" : "450€"
+		},
+		{
+			"images" : "imgs/Pippo.jpeg",
+			"title"  : "Pippo Ciot",
+			"description" : "42Cavy",
+			"category" : "Learner",
+			"price" : "150€"
+		},
+		{
+			"images" : "imgs/Peppa.jpeg",
+			"title"  : "Peppa Crock",
+			"description" : "42Cavy",
+			"category" : "Student",
+			"price" : "450€"
+		},
+		{
+			"images" : "imgs/Pippo.jpeg",
+			"title"  : "Pippo Ciot",
+			"description" : "42Cavy",
+			"category" : "Learner",
+			"price" : "150€"
+		},
+		{
+			"images" : "imgs/Peppa.jpeg",
+			"title"  : "Peppa Crock",
+			"description" : "42Cavy",
+			"category" : "Student",
+			"price" : "450€"
+		},
+		{
+			"images" : "imgs/Pippo.jpeg",
+			"title"  : "Pippo Ciot",
+			"description" : "42Cavy",
+			"category" : "Learner",
+			"price" : "150€"
+		},
+		{
+			"images" : "imgs/Peppa.jpeg",
+			"title"  : "Peppa Crock",
+			"description" : "42Cavy",
+			"category" : "Student",
+			"price" : "450€"
+		},
+		{
+			"images" : "imgs/Pippo.jpeg",
+			"title"  : "Pippo Ciot",
+			"description" : "42Cavy",
+			"category" : "Learner",
+			"price" : "150€"
 		}
 	]
 }
