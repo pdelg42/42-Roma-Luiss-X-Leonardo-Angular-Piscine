@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Card </title>
+    </head>
+    <body>
+        <section id="product-grid"></section>
+        <script>
+
+fetch("shop.json")
+  .then(response => response.text())
+  .then(text => {
+    const productGrid = document.getElementById('product-grid');
+    const data = JSON.parse(text);
+
+    for (const cardData of data.cards) {
+      try {
+        const card = document.createElement('div');
+        const image = document.createElement('img');
+        const title = document.createElement('h2');
+        const description = document.createElement('p');
+        const category = document.createElement('p');
+        const price = document.createElement('p');
+
+        image.src = cardData.images;
+        title.textContent = cardData.title;
+        description.textContent = cardData.description;
+        category.textContent = `Categoria: ${cardData.category}`;
+        price.textContent = `Prezzo: ${cardData.price} euro`;
+
+        card.appendChild(image);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(category);
+        card.appendChild(price);
+
+        productGrid.appendChild(card);
+      } catch(err) {
+        console.log(error);
+      }
+    }
+  });
+        </script>
+    </body>
+</html>
