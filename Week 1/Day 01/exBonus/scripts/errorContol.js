@@ -33,10 +33,10 @@ function controlZip(id, msg) {
     errorMsg.textContent = " ";
   }
   else if (!isNumber) {
-    errorMsg.textContent = "Inserisci una password valida!";
+    errorMsg.textContent = "Inserisci una Zipcode valida!";
   }
   else if (x.length != 5) {
-    errorMsg.textContent = "Inserisci una password di 5!";
+    errorMsg.textContent = "Inserisci uno Zipcode valido!";
   }
   else {
     errorMsg.textContent = "Input valido!";
@@ -47,7 +47,7 @@ function isNumeric (x, errorMsg) {
   var i = 0;
 
   while (x[i]) {
-    if (x[i] >= '0' && x[i] <= '9') {
+    if (!((x[i] >= 'a' && x[i] <= 'z') || (x[i] >= 'A' && x[i] <= 'Z'))) {
       return (1);
       break ;
     }
@@ -70,7 +70,7 @@ function sendForm() {
   var errorMsg4 = document.getElementById("errorMsg4");
   var firstName = document.getElementById("firstName");
   var lastName = document.getElementById("lastName");
-  const studentWorker = document.getElementById("studentWorker");
+  const studentWorker = document.querySelector('#studentWorker:checked');
   var textBox = document.getElementById("text-box");
 
   console.log(studentWorker);
@@ -78,6 +78,15 @@ function sendForm() {
     errorMsg4.textContent = "Complete the fields!";
   }
   if (studentWorker) {
-    alert("ok");
+    if (textBox.value == "")
+      errorMsg4.textContent = "Complete the job description!";
+  }
+  if (!studentWorker) {
+    if (textBox.value != "")
+      errorMsg4.textContent = "check the work checkbox!";
+  }
+  else{
+    resetForm()
+    errorMsg4.textContent = "Sended!";
   }
 }
