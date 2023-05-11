@@ -49,7 +49,6 @@ function isNumeric (x, errorMsg) {
   while (x[i]) {
     if (!((x[i] >= 'a' && x[i] <= 'z') || (x[i] >= 'A' && x[i] <= 'Z'))) {
       return (1);
-      break ;
     }
     i++;
   }

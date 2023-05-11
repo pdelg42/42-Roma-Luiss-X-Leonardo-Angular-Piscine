@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(45deg, #fbda61, #ff5acd);
+}
+
+caption {
+	margin-bottom: 27px;
+	font-size: 23px;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 15px;
+	
+}
+
+span {
+	margin-left: 17px;
+	font-size: 27px;
+}
+
+p {
+	font-size: 15px;
+	margin-top: 1px;
+	text-align: right;
+	margin-right: 7.5%;
+	font-style: italic;
+	color: white;
+}
+
+.card {
+	position: relative;
+	width: 500px;
+	height: 190px;
+	background: #fff;
+	border-radius: 35px;
+	box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+	transition: 0.5s;
+}
+
+.card .content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	overflow: hidden;
+}
+
+.card .content .details {
+	text-align: center;
+	cursor: pointer;
+	display: relative;
+	justify-content: center;
+}
+
+.card .content .details .actionButton {
+	display: relative;
+	margin: 20px 0;
+	justify-content: space-between;
+	/* gap: 20px; */
+}
+
+.card .content .details .actionButton button {
+	display: relative;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	font-weight: 500;
+	background: #ff5f95;
+	color: #fff;
+	cursor: pointer;
+}
