@@ -6,22 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Card </title>
 		<link rel="stylesheet" type="text/css" href="shop.css">
-		<script>
-			var glob = new Map();
-			fetch("shop.json").then((res) => {
-				return res.json();
-			}).then((data) => {
-				// console.log(data);
-				for ((x, y) in data) {
-					// glob. = data;
-					console.log(x);
-				}
-				// console.log(glob);
-			});
-
-		</script>
 	</head>
 	<body>
+		<div id="start"></div>
 		<table>
 			<thead>
 				<tr>
@@ -32,7 +19,7 @@
 							</div>
 							<div class="content">
 								<div class="details">
-									<h2 id="old_0"></h2>
+									<h2 id="old_0">Peppa</h2>
 									<h2><br><span>42Roma Student</span></h2>
 									<div class="actionButton">
 										<button>Contact</button>
@@ -83,7 +70,7 @@
 	<footer>
 		<div>
 			<hr style="width:100%; text-align:center">
-			<p>&#169Aperrone2023</p>
+			<p id="foot">&#169Aperrone2023</p>
 		</div>
 	</footer>
 </html>
