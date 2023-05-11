@@ -4,73 +4,45 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE-edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="shop.css">
 		<title> Card </title>
-		<link rel="stylesheet" type="text/css" href="shop.css">
-	</head>
-	<body>
-		<div id="start"></div>
-		<table>
-			<thead>
-				<tr>
-					<th>
-						<div class="card">
-							<div class="imgBox">
-								<img id="0" src="imgs/Peppa.jpeg">
-							</div>
-							<div class="content">
-								<div class="details">
-									<h2 id="old_0">Peppa</h2>
-									<h2><br><span>42Roma Student</span></h2>
-									<div class="actionButton">
-										<button>Contact</button>
-										<button>Follow</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</th>
-					<th>
-						<div class="card">
-							<div class="imgBox">
-								<img id="1" src="imgs/Pippo.jpeg">
-							</div>
-							<div class="content">
-								<div class="details">
-									<h2 id="old_1">Pippo Ciot</h2>
-									<h2><br><span>42Roma Student</span></h2>
-									<div class="actionButton">
-										<button>Contact</button>
-										<button>Follow</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</th>
-					<th>
-						<div class="card">
-							<div class="imgBox">
-								<img id="2" src="imgs/Topopipo.jpeg">
-							</div>
-							<div class="content">
-								<div class="details">
-									<h2 id="old_2">Peppe Crack</h2>
-									<h2><br><span>42Roma Student</span></h2>
-									<div class="actionButton">
-										<button>Contact</button>
-										<button>Follow</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</th>
-				</tr>
-			</thead>
-		</table>
-	</body>
-	<footer>
-		<div>
-			<hr style="width:100%; text-align:center">
-			<p id="foot">&#169Aperrone2023</p>
-		</div>
-	</footer>
+    </head>
+    <body>
+        <section id="product-grid"></section>
+        <script>
+          fetch("shop.json")
+            .then(response => response.text())
+            .then(text => {
+              const productGrid = document.getElementById('product-grid');
+              const data = JSON.parse(text);
+            
+              for (const cardData of data.cards) {
+                try {
+                  const card = document.createElement('div');
+                  const image = document.createElement('img');
+                  const title = document.createElement('h2');
+                  const description = document.createElement('h3');
+                  const category = document.createElement('h3');
+                  const price = document.createElement('h3');
+                
+                  image.src = cardData.images;
+                  title.textContent = cardData.title;
+                  description.textContent = cardData.description;
+                  category.textContent = `Categoria: ${cardData.category}`;
+                  price.textContent = `Prezzo: ${cardData.price} euro`;
+                
+                  card.appendChild(image);
+                  card.appendChild(title);
+                  card.appendChild(description);
+                  card.appendChild(category);
+                  card.appendChild(price);
+                
+                  productGrid.appendChild(card);
+                } catch(err) {
+                  console.log(error);
+                }
+              }
+            });
+        </script>
+    </body>
 </html>
